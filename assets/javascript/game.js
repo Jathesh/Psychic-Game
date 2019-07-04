@@ -33,14 +33,26 @@ function lost()
 {
     var_loss = var_loss + 1;
     i = 0 ;
+    var_left = 0;
     var_hman = [];
+    op();
 }
 
 function win()
 {
-    var_win = var_win++ ;
+    var_win = var_win + 1 ;
     i = 0 ;
+    var_left = 0;
     var_hman = [];
+    op();
+}
+
+function op()
+{
+    wins.textContent = "Wins :" + var_win ;
+    Loses.textContent = "Loses :" + var_loss ;
+    Left.textContent = "Chances Left :" + var_left ;
+    Sofar.textContent = var_hman ;
 }
 
 
@@ -49,7 +61,7 @@ function win()
 document.onkeyup = function (event)
 
 {
-if  ((i !== 0) && (var_left == 0))
+if  ((i !== 0) && (var_left == 1))
 {
 debugger;
 lost() ;
@@ -74,8 +86,11 @@ else
 
                
         i = i+1 ;
-        var_left = (2 - i); 
+        var_left = (6 - i); 
+
 }
+
+op();
 
 }
 debugger;
