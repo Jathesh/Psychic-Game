@@ -27,7 +27,7 @@ function generate_random_string(string_length)
     var var_loss = 0;
     var var_left = 0;
     var i = 0;
-    var var_repeat ;
+    var var_repeat = " ";
     
     
 function lost()
