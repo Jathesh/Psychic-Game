@@ -27,6 +27,7 @@ function generate_random_string(string_length)
     var var_loss = 0;
     var var_left = 0;
     var i = 0;
+    var var_repeat ;
     
     
 function lost()
@@ -53,6 +54,7 @@ function op()
     Loses.textContent = "Loses :" + var_loss ;
     Left.textContent = "Chances Left :" + var_left ;
     Sofar.textContent = var_hman ;
+    var_repeat = " ";
 }
 
 
@@ -69,8 +71,27 @@ lost() ;
 else
 
 {
-    debugger;
     var_key = event.key;
+    var_key = var_key.toLowerCase();
+/*-------------------------------------*/
+for(var j=0;j<var_hman.length;j++)
+{
+    debugger;
+     if (var_hman[j] == var_key ) 
+     {
+         var_repeat = "X" ;
+     }
+
+
+}
+
+
+/*-------------------------------------*/
+    
+if (var_repeat == ' ') 
+{
+    debugger;
+    
     var_letter = generate_random_string(1);
     var_letter = var_letter.toLowerCase();
 
@@ -93,6 +114,8 @@ else
 }
 
 op();
+
+} /*-- var_repeat*/
 
 }
 debugger;
