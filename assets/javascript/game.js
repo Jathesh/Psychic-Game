@@ -35,7 +35,7 @@ function lost()
     i = 0 ;
     var_left = 0;
     var_hman = [];
-    op();
+    
 }
 
 function win()
@@ -44,7 +44,7 @@ function win()
     i = 0 ;
     var_left = 0;
     var_hman = [];
-    op();
+    
 }
 
 function op()
@@ -83,10 +83,12 @@ else
             win();
             
         }
+        else
+        {
+         i = i+1 ;
+         var_left = (5 - i); 
+        }               
 
-               
-        i = i+1 ;
-        var_left = (6 - i); 
 
 }
 
