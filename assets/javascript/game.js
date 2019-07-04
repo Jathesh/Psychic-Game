@@ -63,7 +63,7 @@ function op()
 document.onkeyup = function (event)
 
 {
-if  ((i !== 0) && (var_left == 1))
+if  ((i !== 0) && (var_left == 0))
 {
 debugger;
 lost() ;
@@ -108,6 +108,10 @@ if (var_repeat == ' ')
         {
          i = i+1 ;
          var_left = (5 - i); 
+         if ((i !== 0) && (var_left == 0))
+         {
+            var_loss = var_loss + 1;
+         }
         }               
 
 
